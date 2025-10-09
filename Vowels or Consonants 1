@@ -4,20 +4,17 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-          Scanner sc = new Scanner(System.in);
-        char ch = sc.next().charAt(0);  
-        if (Character.isLetter(ch)) {
-        char lowerCh = Character.toLowerCase(ch);
-            if (lowerCh == 'a' || lowerCh == 'e' || lowerCh == 'i' || lowerCh == 'o' || lowerCh == 'u') {
-                System.out.println("The Character " + ch + " is Vowel");
-            } else {
-                System.out.println("The Character " + ch + " is Consonant");
-            }
-        } else {
-            System.out.println("Invalid Input");
+        Scanner A=new Scanner(System.in);
+        char a=A.next().charAt(0);
+        int vow=0,con=0;
+        
+        if(a=='A'||a=='E'||a=='I'||a=='O'||a=='U'||a=='a'||a=='e'||a=='i'||a=='o'||a=='u'){
+            
+            System.out.println("The Character "+a+" is Vowel");
         }
-
-        sc.close();
+        else{
+            System.out.println("The Character "+a+" is Consonant");
+        }
+    
     }
 }
