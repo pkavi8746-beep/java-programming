@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int num= sc.nextInt();
+        
+    if(num < 100 || num > 999) {
+        System.out.println("Invalid Input");
+    } else {
+        int original = num;
+        int reversed = 0;
+        
+        while(num != 0){
+            int digit = num% 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
+        }
+        if (original == reversed) {
+            System.out.println("palindrome");
+        } else {
+            System.out.println("not palindrome");
+        }
+      }
+    }
+}
+    
