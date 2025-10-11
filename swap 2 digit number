@@ -4,24 +4,22 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-          Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        String str = String.valueOf(num);
-        if (str.length() == 2) {
-            char first = str.charAt(0);
-            char second = str.charAt(1);
-            System.out.println(""+ second + first);
-        } 
-        else if (str.length() > 2) 
-        {
-            char first = str.charAt(0);
-            char second = str.charAt(1);
-            System.out.println(""+ second + first);
-        } 
-        else {
-            System.out.println("STDOUT");
+         Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        if(n>=10){
+            while(n>=100){
+                n=n/10;
+            }
+            int first=n/10;
+            int second=n%10;
+            if(first!=0 && second!=0){
+                int swap=(second*10)+first;
+                  System.out.println(swap);
+            }
+         
         }
+        else
+            System.out.println("STDOUT");
+       
     }
 }
-    
